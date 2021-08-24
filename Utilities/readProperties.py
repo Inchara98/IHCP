@@ -1,10 +1,28 @@
 import configparser
+import os
 from datetime import datetime
+
+from selenium import webdriver
 
 config=configparser.RawConfigParser()
 config.read("/home/inchara/PycharmProjects/IHCP/Configuration/config.ini")
 
 class ReadConfig():
+
+
+    def get_download_dir(self):
+        cwd = os.path.dirname(__file__)
+        download_path = os.path.join(cwd,'Download')
+        return download_path
+
+    def get_driver(self):
+        self.p= ReadConfig()
+        options = webdriver.ChromeOptions()
+        prefs = {'download.default_directory': self.p.get_download_dir()}
+        options.add_experimental_option('prefs', prefs)
+        # options.add_argument('--headless')
+        self.driver = webdriver.Chrome(options=options, executable_path="")
+        return self.driver
 
     @staticmethod
     def getApplicationUrl():
