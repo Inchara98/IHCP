@@ -21,7 +21,7 @@ class ReadConfig():
         prefs = {'download.default_directory': self.p.get_download_dir()}
         options.add_experimental_option('prefs', prefs)
         # options.add_argument('--headless')
-        self.driver = webdriver.Chrome(options=options, executable_path="")
+        self.driver = webdriver.Chrome(options=options, executable_path="/home/inchara/PycharmProjects/IHCP/Driver/chromedriver")
         return self.driver
 
     @staticmethod

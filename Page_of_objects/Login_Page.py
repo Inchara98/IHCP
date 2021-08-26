@@ -34,7 +34,7 @@ class LoginPage:
     def field_gotofolder(self):
         self.data = Locator_Path()
         B = Select(self.driver.find_element_by_id(self.data.field_gotofolder))
-        time.sleep((4))
+        time.sleep(4)
         B.select_by_index(3)
         time.sleep(3)
 
@@ -46,7 +46,7 @@ class LoginPage:
     def field_gotofolder1(self):
         self.data = Locator_Path()
         B = Select(self.driver.find_element_by_id(self.data.field_gotofolder))
-        time.sleep((4))
+        time.sleep(4)
         B.select_by_index(6)
         time.sleep(3)
 
@@ -54,4 +54,17 @@ class LoginPage:
         self.data = Locator_Path
         self.driver.find_element_by_id(self.data.Last_Page).click()
         time.sleep(3)
+
+    def NewFile(self):
+        self.data = Locator_Path()
+        self.driver.find_element_by_xpath("//*[@id='cbmenucontainer']/div[1]/img").click()
+        time.sleep(2)
+        self.driver.find_element_by_xpath("//*[@id='cbmenucontainer']/div[2]/ul/li[4]").click()
+        time.sleep(3)
+        # i = Select(self.driver.find_element_by_xpath(self.data.NewFile))
+        # time.sleep(4)
+        # i.select_by_index(3)
+        # time.sleep(5)
+
+
 

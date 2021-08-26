@@ -7,3 +7,4 @@ class Locator_Path():
     field_gotofolder = "field_gotofolder"
     Upload_Wizard = "//button[@class='button btnPrimary']"
     Last_Page = "pagingcontrol_tolastpage"
+    NewFile = "//*[@id='cbmenucontainer']/div[2]/ul/li"
