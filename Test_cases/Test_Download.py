@@ -32,11 +32,11 @@ class Test_001_Login:
         self.lp.Last_Page()
         time.sleep(2)
         self.lp.NewFile()
-        # new_files = "//img[@alt='New File']"
+        #new_files = "//img[@alt='New File']"
         new_files="//img[@alt='File']"
-        files =  self.driver.find_elements_by_xpath(new_files)
+        files = self.driver.find_elements_by_xpath(new_files)
         # for i in range(len(files)):
-        #     #print(files[i].text, 'links clicked')
+        #     print(files[i].text, 'links clicked')
         #     files[i].click()
         #     time.sleep(3)
         #
@@ -51,18 +51,20 @@ class Test_001_Login:
             i=i+1
             checkbox = "//input[@type='checkbox']"+"["+str(i)+"]"
             print(checkbox)
-            a=self.driver.find_element_by_xpath(checkbox)
+            a = self.driver.find_element_by_xpath(checkbox)
             #a=self.driver.find_element_by_xpath("//*[@id='folderfilelisttable']/tbody/tr["+str(row)+"]/td["+str(column)+"]")
             time.sleep(2)
             print(checkbox,"status=",a.is_selected())
             if a.is_selected() == True:
                 print("download icon")
                 self.driver.find_element_by_id("downloadLink").click()
-                time.sleep(10)
+                time.sleep(15)
                 row = row + 1
                 column = column + 1
                 print(a,row,column)
                 i=0
+                a.click()
+
 
 
 
