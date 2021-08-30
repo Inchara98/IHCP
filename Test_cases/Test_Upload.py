@@ -47,7 +47,7 @@ class Test_001_Login:
         time.sleep(10)
         self.lp.Upload_Wizard()
         time.sleep(4)
-        add_files = self.lp.addfiles()
+        add_files = self.driver.find_element_by_xpath("//*[@id='jswiz-container']/div[2]/div/div/div[2]/div[1]/div[10]/span/input")
         if len(self.Community) != 0:
             add_files.send_keys(self.Community+self.date)
             time.sleep(2)
