@@ -32,7 +32,7 @@ class Test_001_Login:
     date = ReadConfig.get_date()
 
     def test_login(self):
-        self.driver = webdriver.Chrome(executable_path="/home/inchara/PycharmProjects/IHCP/Driver/chromedriver")
+        self.driver = webdriver.Chrome(executable_path="")
         self.driver.maximize_window()
         self.driver.get(self.baseUrl)
         time.sleep(5)
@@ -47,72 +47,114 @@ class Test_001_Login:
         time.sleep(10)
         self.lp.Upload_Wizard()
         time.sleep(4)
-        add_files = self.driver.find_element_by_xpath("//*[@id='jswiz-container']/div[2]/div/div/div[2]/div[1]/div[10]/span/input")
+        add_files = self.lp.addfiles()
         if len(self.Community) != 0:
             add_files.send_keys(self.Community+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Deaconess) != 0:
             add_files.send_keys(self.Deaconess+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Baptist_Health) != 0:
-            add_files.send_keys(self.Baptist_Health.date)
+            add_files.send_keys(self.Baptist_Health+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.CommAnder) != 0:
-            add_files.send_keys(self.CommAnder.date)
+            add_files.send_keys(self.CommAnder+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Community_VEI) != 0:
-            add_files.send_keys(self.Community_VEI.date)
+            add_files.send_keys(self.Community_VEI+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Daviess) != 0:
-            add_files.send_keys(self.Daviess.date)
+            add_files.send_keys(self.Daviess+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Gibson) != 0:
-            add_files.send_keys(self.Gibson.date)
+            add_files.send_keys(self.Gibson+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.GoodSam) != 0:
-            add_files.send_keys(self.GoodSam.date)
+            add_files.send_keys(self.GoodSam+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Goshen) != 0:
-            add_files.send_keys(self.Goshen.date)
+            add_files.send_keys(self.Goshen+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.gsFhc) != 0:
-            add_files.send_keys(self.gsFhc.date)
+            add_files.send_keys(self.gsFhc+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Harrison_County) != 0:
-            add_files.send_keys(self.Harrison_County.date)
+            add_files.send_keys(self.Harrison_County+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Kings)  != 0:
-            add_files.send_keys(self.Kings.date)
+            add_files.send_keys(self.Kings+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Methodist) != 0:
-            add_files.send_keys(self.Methodist.date)
+            add_files.send_keys(self.Methodist+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Parkview)  != 0:
-            add_files.send_keys(self.Parkview.date)
+            add_files.send_keys(self.Parkview+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Putnam)  != 0:
-            add_files.send_keys(self.Putnam.date)
+            add_files.send_keys(self.Putnam+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.REID)  != 0:
-            add_files.send_keys(self.REID.date)
+            add_files.send_keys(self.REID+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Riverview) != 0:
-            add_files.send_keys(self.Riverview.date)
+            add_files.send_keys(self.Riverview+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.The_Womens) != 0:
-            add_files.send_keys(self.The_Womens.date)
+            add_files.send_keys(self.The_Womens+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.UNION) != 0:
-            add_files.send_keys(self.UNION.date)
+            add_files.send_keys(self.UNION+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.UTMC) != 0:
-            add_files.send_keys(self.UTMC.date)
+            add_files.send_keys(self.UTMC+self.date)
             time.sleep(2)
+        else:
+            pass
         if len(self.Wabash) != 0:
-            add_files.send_keys(self.Wabash.date)
+            add_files.send_keys(self.Wabash+self.date)
             time.sleep(2)
-        #self.lp.uploadfiles()
-        #time.sleep(100)
+        else:
+            pass
+        self.lp.uploadfiles()
+        time.sleep(100)
         self.driver.close()
 
 

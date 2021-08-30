@@ -18,8 +18,8 @@ class Test_001_Login:
 
         paths = Locator_Path()
         chromeOptions = Options()
-        chromeOptions.add_experimental_option("prefs",{"download.default_directory":"/home/inchara/PycharmProjects/IHCP/Download"})
-        self.driver = webdriver.Chrome(executable_path="/home/inchara/PycharmProjects/IHCP/Driver/chromedriver",chrome_options=chromeOptions)
+        chromeOptions.add_experimental_option("prefs",{"download.default_directory":""})
+        self.driver = webdriver.Chrome(executable_path="",chrome_options=chromeOptions)
         self.driver.maximize_window()
         self.driver.get(self.baseUrl)
         time.sleep(5)

@@ -53,13 +53,15 @@ class LoginPage:
 
 
     def addfiles(self):
-        self.data = Locator_Path
-        self.driver.find_element_by_xpath(self.data.add_files)
+        self.data = Locator_Path()
+        file = self.driver.find_element_by_xpath(self.data.add_files)
+        return file
 
     def uploadfiles(self):
-        self.data = Locator_Path
+        self.data = Locator_Path()
         self.driver.find_element_by_xpath(self.data.upload_files).click()
 
+
     def Download_button(self):
-        self.data = Locator_Path
+        self.data = Locator_Path()
         self.driver.find_element_by_class_name(self.data.Download_button).click()

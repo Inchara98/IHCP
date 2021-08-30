@@ -10,5 +10,4 @@ class Locator_Path():
     upload_files = "//*[@id='jswiz-container']/div[2]/div/div/div[2]/div[2]/span[2]"
 
 
-
     Download_files ="//span[contains(text(),'Download')]"
