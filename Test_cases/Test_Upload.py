@@ -72,13 +72,13 @@ class Test_001_Login:
         if len(self.GoodSam) != 0:
             add_files.send_keys(self.GoodSam.date)
             time.sleep(2)
-        if len(self.Goshen)  != 0:
+        if len(self.Goshen) != 0:
             add_files.send_keys(self.Goshen.date)
             time.sleep(2)
-        if len(self.gsFhc)  != 0:
+        if len(self.gsFhc) != 0:
             add_files.send_keys(self.gsFhc.date)
             time.sleep(2)
-        if len(self.Harrison_County)  != 0:
+        if len(self.Harrison_County) != 0:
             add_files.send_keys(self.Harrison_County.date)
             time.sleep(2)
         if len(self.Kings)  != 0:
@@ -96,7 +96,7 @@ class Test_001_Login:
         if len(self.REID)  != 0:
             add_files.send_keys(self.REID.date)
             time.sleep(2)
-        if len(self.Riverview)  != 0:
+        if len(self.Riverview) != 0:
             add_files.send_keys(self.Riverview.date)
             time.sleep(2)
         if len(self.The_Womens) != 0:
@@ -105,7 +105,7 @@ class Test_001_Login:
         if len(self.UNION) != 0:
             add_files.send_keys(self.UNION.date)
             time.sleep(2)
-        if len(self.UTMC)  != 0:
+        if len(self.UTMC) != 0:
             add_files.send_keys(self.UTMC.date)
             time.sleep(2)
         if len(self.Wabash) != 0:
