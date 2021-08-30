@@ -50,35 +50,7 @@ class LoginPage:
         B.select_by_index(6)
         time.sleep(3)
 
-    def Last_Page(self):
-        self.data = Locator_Path
-        self.driver.find_element_by_id(self.data.Last_Page).click()
-        time.sleep(3)
 
-    def NewFile(self):
-        self.data = Locator_Path()
-        self.driver.find_element_by_xpath("//*[@id='cbmenucontainer']/div[1]/img").click()
-        time.sleep(2)
-        self.driver.find_element_by_xpath("//*[@id='cbmenucontainer']/div[2]/ul/li[3]").click()
-        time.sleep(3)
-
-    def New_Files(self):
-        self.data = Locator_Path
-        self.driver.find_element_by_id(self.data.new_files)
-        time.sleep(3)
-
-    def name(self):
-        self.data = Locator_Path
-        self.driver.find_element_by_xpath(self.data.name)
-
-    def checkbox(self):
-        self.data = Locator_Path
-        self.driver.find_element_by_xpath(self.data.checkbox)
-
-
-    def homepage(self):
-        self.data = Locator_Path
-        self.driver.find_element_by_xpath(self.data.homepage).click()
 
     def addfiles(self):
         self.data = Locator_Path
