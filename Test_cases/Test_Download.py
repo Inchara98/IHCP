@@ -1,4 +1,3 @@
-import os
 import time
 from selenium import webdriver
 
@@ -17,9 +16,8 @@ class Test_001_Login:
 
     def test_login(self):
 
-        count = 0
         paths = Locator_Path()
-        chromeOptions=Options()
+        chromeOptions = Options()
         chromeOptions.add_experimental_option("prefs",{"download.default_directory":"/home/inchara/PycharmProjects/IHCP/Download"})
         self.driver = webdriver.Chrome(executable_path="/home/inchara/PycharmProjects/IHCP/Driver/chromedriver",chrome_options=chromeOptions)
         self.driver.maximize_window()
@@ -33,7 +31,7 @@ class Test_001_Login:
         self.lp.clickLogin()
         time.sleep(5)
 
-        newfiles=self.driver.find_elements_by_xpath(paths.Download_files)
+        newfiles = self.driver.find_elements_by_xpath(paths.Download_files)
         for i in range(len(newfiles)):
             i=12
             download_btn = "//*[@id='content']/tbody/tr["+str(i)+"]/td[2]/span/a[2]/span"
