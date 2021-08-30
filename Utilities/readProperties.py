@@ -9,21 +9,6 @@ config.read("/home/inchara/PycharmProjects/IHCP/Configuration/config.ini")
 
 class ReadConfig():
 
-
-    def get_download_dir(self):
-        cwd = os.path.dirname(__file__)
-        download_path = os.path.join(cwd,'Download')
-        return download_path
-
-    def get_driver(self):
-        self.p= ReadConfig()
-        options = webdriver.ChromeOptions()
-        prefs = {'download.default_directory': self.p.get_download_dir()}
-        options.add_experimental_option('prefs', prefs)
-        # options.add_argument('--headless')
-        self.driver = webdriver.Chrome(options=options, executable_path="/home/inchara/PycharmProjects/IHCP/Driver/chromedriver")
-        return self.driver
-
     @staticmethod
     def getApplicationUrl():
         url = config.get('common_info','baseUrl')
@@ -50,9 +35,99 @@ class ReadConfig():
         return Deaconess
 
     @staticmethod
-    def get_Downloads():
-        Downloads = config.get('common_info', 'Downloads')
-        return Downloads
+    def get_Baptist_Health_FilePath():
+        Baptist_Health = config.get('common_info', 'Baptist_Health')
+        return Baptist_Health
+
+    @staticmethod
+    def get_CommAnder_FilePath():
+        CommAnder = config.get('common_info', 'CommAnder')
+        return CommAnder
+
+    @staticmethod
+    def get_Community_VEI_FilePath():
+        Community_VEI = config.get('common_info', 'Community_VEI')
+        return Community_VEI
+
+    @staticmethod
+    def get_Daviess_FilePath():
+        Daviess = config.get('common_info', 'Daviess')
+        return Daviess
+
+    @staticmethod
+    def get_Gibson_FilePath():
+        Deaconess = config.get('common_info', 'Deaconess')
+        return Deaconess
+
+    @staticmethod
+    def get_GoodSam_FilePath():
+        GoodSam = config.get('common_info', 'GoodSam')
+        return GoodSam
+
+    @staticmethod
+    def get_Goshen_FilePath():
+        Goshen = config.get('common_info', 'Goshen')
+        return Goshen
+
+    @staticmethod
+    def get_gsFhc_FilePath():
+        gsFhc = config.get('common_info', 'gsFhc')
+        return gsFhc
+
+    @staticmethod
+    def get_Harrison_County_FilePath():
+        Harrison_County = config.get('common_info', 'Harrison_County')
+        return Harrison_County
+
+    @staticmethod
+    def get_Kings_FilePath():
+        Kings = config.get('common_info', 'Kings')
+        return Kings
+
+    @staticmethod
+    def get_Methodist_FilePath():
+        Methodist= config.get('common_info', 'Methodist')
+        return Methodist
+
+    @staticmethod
+    def get_Parkview_FilePath():
+        Parkview = config.get('common_info', 'Parkview')
+        return Parkview
+
+    @staticmethod
+    def get_Putnam_FilePath():
+        Putnam = config.get('common_info', 'Putnam')
+        return Putnam
+
+    @staticmethod
+    def get_REID_FilePath():
+        REID = config.get('common_info', 'REID')
+        return REID
+
+    @staticmethod
+    def get_Riverview_FilePath():
+        Riverview = config.get('common_info', 'Riverview')
+        return Riverview
+
+    @staticmethod
+    def get_The_Womens_FilePath():
+        The_Womens = config.get('common_info', 'The_Womens')
+        return The_Womens
+
+    @staticmethod
+    def get_UNION_FilePath():
+        UNION = config.get('common_info', 'UNION')
+        return UNION
+
+    @staticmethod
+    def get_UTMC_FilePath():
+        UTMC = config.get('common_info', 'UTMC')
+        return UTMC
+
+    @staticmethod
+    def get_Wabash_FilePath():
+        Wabash= config.get('common_info', 'Wabash')
+        return Wabash
 
     @staticmethod
     def get_date():
@@ -61,10 +136,3 @@ class ReadConfig():
         year = current_time.strftime('%y')
         date = date_formate.replace('/', '') + year + ""
         return date
-
-
-
-
-
-
-

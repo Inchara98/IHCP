@@ -9,7 +9,26 @@ class Test_001_Login:
     password = ReadConfig.getPassword()
     Community = ReadConfig.get_Community_FilePath()
     Deaconess = ReadConfig.get_Deaconess_FilePath()
-    Downloads = ReadConfig.get_Downloads()
+    Baptist_Health = ReadConfig.get_Baptist_Health_FilePath()
+    CommAnder = ReadConfig.get_CommAnder_FilePath()
+    Community_VEI = ReadConfig.get_Community_VEI_FilePath()
+    Daviess = ReadConfig.get_Daviess_FilePath()
+    Gibson = ReadConfig.get_Gibson_FilePath()
+    GoodSam = ReadConfig.get_GoodSam_FilePath()
+    Goshen = ReadConfig.get_Goshen_FilePath()
+    gsFhc = ReadConfig.get_gsFhc_FilePath()
+    Harrison_County = ReadConfig.get_Harrison_County_FilePath()
+    Kings = ReadConfig.get_Kings_FilePath()
+    Methodist = ReadConfig.get_Methodist_FilePath()
+    Parkview = ReadConfig.get_Parkview_FilePath()
+    Putnam = ReadConfig.get_Putnam_FilePath()
+    REID = ReadConfig.get_REID_FilePath()
+    Riverview = ReadConfig.get_Riverview_FilePath()
+    The_Womens = ReadConfig.get_The_Womens_FilePath()
+    UNION = ReadConfig.get_UNION_FilePath()
+    UTMC = ReadConfig.get_UTMC_FilePath()
+    Wabash = ReadConfig.get_Wabash_FilePath()
+
     date = ReadConfig.get_date()
 
     def test_login(self):
@@ -28,15 +47,71 @@ class Test_001_Login:
         time.sleep(10)
         self.lp.Upload_Wizard()
         time.sleep(4)
-        add_files = self.driver.find_element_by_xpath(
-            "//*[@id='jswiz-container']/div[2]/div/div/div[2]/div[1]/div[10]/span/input")
-        #add_files.send_keys(self.Community)
-        time.sleep(2)
-        #add_files.send_keys("/home/inchara/Downloads/IHCP Ehealth/GHI/OUTGOING/Deaconess/ELIG_edi_210_GHI_DEAWF2DLY031021")
-        time.sleep(2)
-        add_files.send_keys(self.Downloads+self.date)
-        time.sleep(2)
-        #self.driver.find_element_by_xpath("//*[@id='jswiz-container']/div[2]/div/div/div[2]/div[2]/span[2]").click()
+        add_files = self.lp.addfiles()
+        if len(self.Community) != 0:
+            add_files.send_keys(self.Community+self.date)
+            time.sleep(2)
+        if len(self.Deaconess) != 0:
+            add_files.send_keys(self.Deaconess+self.date)
+            time.sleep(2)
+        if len(self.Baptist_Health) != 0:
+            add_files.send_keys(self.Baptist_Health.date)
+            time.sleep(2)
+        if len(self.CommAnder) != 0:
+            add_files.send_keys(self.CommAnder.date)
+            time.sleep(2)
+        if len(self.Community_VEI) != 0:
+            add_files.send_keys(self.Community_VEI.date)
+            time.sleep(2)
+        if len(self.Daviess) != 0:
+            add_files.send_keys(self.Daviess.date)
+            time.sleep(2)
+        if len(self.Gibson) != 0:
+            add_files.send_keys(self.Gibson.date)
+            time.sleep(2)
+        if len(self.GoodSam) != 0:
+            add_files.send_keys(self.GoodSam.date)
+            time.sleep(2)
+        if len(self.Goshen)  != 0:
+            add_files.send_keys(self.Goshen.date)
+            time.sleep(2)
+        if len(self.gsFhc)  != 0:
+            add_files.send_keys(self.gsFhc.date)
+            time.sleep(2)
+        if len(self.Harrison_County)  != 0:
+            add_files.send_keys(self.Harrison_County.date)
+            time.sleep(2)
+        if len(self.Kings)  != 0:
+            add_files.send_keys(self.Kings.date)
+            time.sleep(2)
+        if len(self.Methodist) != 0:
+            add_files.send_keys(self.Methodist.date)
+            time.sleep(2)
+        if len(self.Parkview)  != 0:
+            add_files.send_keys(self.Parkview.date)
+            time.sleep(2)
+        if len(self.Putnam)  != 0:
+            add_files.send_keys(self.Putnam.date)
+            time.sleep(2)
+        if len(self.REID)  != 0:
+            add_files.send_keys(self.REID.date)
+            time.sleep(2)
+        if len(self.Riverview)  != 0:
+            add_files.send_keys(self.Riverview.date)
+            time.sleep(2)
+        if len(self.The_Womens) != 0:
+            add_files.send_keys(self.The_Womens.date)
+            time.sleep(2)
+        if len(self.UNION) != 0:
+            add_files.send_keys(self.UNION.date)
+            time.sleep(2)
+        if len(self.UTMC)  != 0:
+            add_files.send_keys(self.UTMC.date)
+            time.sleep(2)
+        if len(self.Wabash) != 0:
+            add_files.send_keys(self.Wabash.date)
+            time.sleep(2)
+        #self.lp.uploadfiles()
         #time.sleep(100)
         self.driver.close()
 

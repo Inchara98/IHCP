@@ -59,12 +59,35 @@ class LoginPage:
         self.data = Locator_Path()
         self.driver.find_element_by_xpath("//*[@id='cbmenucontainer']/div[1]/img").click()
         time.sleep(2)
-        self.driver.find_element_by_xpath("//*[@id='cbmenucontainer']/div[2]/ul/li[4]").click()
+        self.driver.find_element_by_xpath("//*[@id='cbmenucontainer']/div[2]/ul/li[3]").click()
         time.sleep(3)
-        # i = Select(self.driver.find_element_by_xpath(self.data.NewFile))
-        # time.sleep(4)
-        # i.select_by_index(3)
-        # time.sleep(5)
+
+    def New_Files(self):
+        self.data = Locator_Path
+        self.driver.find_element_by_id(self.data.new_files)
+        time.sleep(3)
+
+    def name(self):
+        self.data = Locator_Path
+        self.driver.find_element_by_xpath(self.data.name)
+
+    def checkbox(self):
+        self.data = Locator_Path
+        self.driver.find_element_by_xpath(self.data.checkbox)
 
 
+    def homepage(self):
+        self.data = Locator_Path
+        self.driver.find_element_by_xpath(self.data.homepage).click()
 
+    def addfiles(self):
+        self.data = Locator_Path
+        self.driver.find_element_by_xpath(self.data.add_files)
+
+    def uploadfiles(self):
+        self.data = Locator_Path
+        self.driver.find_element_by_xpath(self.data.upload_files).click()
+
+    def Download_button(self):
+        self.data = Locator_Path
+        self.driver.find_element_by_class_name(self.data.Download_button).click()
