@@ -1,0 +1,5 @@
+IHCP Proess Prerequisites: To Run Selenium python scripts ,Install pycharm in your system Google Chrome need to be installed in the server or local machine. Chrome driver need to be downloaded and placed in the IHCP/Driver folder Steps to install the google chrome
+Open the terminal (Ctrl+Alt+t) in the ubuntu wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb sudo apt install ./google-chrome-stable_current_amd64.deb Check chrome brower version using command -> google-chrome -version
+Steps to Download the chrome driver Note: Based on chrome browser version need to download chrome driver https://sites.google.com/a/chromium.org/chromedriver/downloads
+First clone or download zip file from GitHu to your local storage 2.Open the project in pycharm 3.add python interpreter and download the following selenium, chrome, config parser refer requirment.txt file 4.download chrome driver based on chrome browser version both should be same and place in Driver folder and give driver.exe path in download.py in executable path and in upload.py in executable path
+provide all hospital groups file path in config.ini
