@@ -153,7 +153,7 @@ class Test_001_Login:
             time.sleep(2)
         else:
             pass
-        self.lp.uploadfiles()
+        #self.lp.uploadfiles()
         time.sleep(100)
         self.driver.close()
 

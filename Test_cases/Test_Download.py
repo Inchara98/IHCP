@@ -32,21 +32,21 @@ class Test_001_Login:
         time.sleep(5)
 
         newfiles = self.driver.find_elements_by_xpath(paths.Download_files)
-        for i in range(len(newfiles)):
-            i=12
-            download_btn = "//*[@id='content']/tbody/tr["+str(i)+"]/td[2]/span/a[2]/span"
+
+        i=12
+        while(i<=len(newfiles)):
+            download_btn = "//*[@id='content']/tbody/tr["+str(i)+"]/td[2]/span/a[2]"
             self.driver.find_element_by_xpath(download_btn).click()
-            time.sleep(10)
+            time.sleep(6)
             i = i+1
-        else:
-            print('File downloading is failed ')
+            print(download_btn)
 
 
 
 
 
 
-
+#//*[@id="content"]/tbody/tr[13]/td[2]/span/a[2]
 
 
 

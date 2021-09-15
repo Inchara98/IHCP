@@ -5,7 +5,7 @@ from datetime import datetime
 from selenium import webdriver
 
 config=configparser.RawConfigParser()
-config.read("/home/inchara/PycharmProjects/IHCP/Configuration/config.ini")
+config.read("")
 
 class ReadConfig():
 
